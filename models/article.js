@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-let ArticleSchema = new Schema({
+const ArticleSchema = new Schema({
     title: {
         type: String,
         required: true
@@ -10,9 +10,6 @@ let ArticleSchema = new Schema({
     link: {
         type: String,
         required: true
-    },
-    summary: {
-        type: String
     },
     img: {
         type: String
@@ -31,6 +28,6 @@ let ArticleSchema = new Schema({
     }]
 });
 
-let Article = mongoose.model("Article", ArticleSchema);
+const Article = mongoose.model("Article", ArticleSchema);
 
 module.exports = Article;
